@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Back to School 👾🤖</title>
+    <script
+      type="text/javascript"
+      src="https://public.tableau.com/javascripts/api/tableau-2.min.js"
+    ></script>
+  </head>
+  <body>
+    <h1>Back to School Embedding Project 👾🤖</h1>
+    <div>
+      <button id="exportPDF">Yeet to PDF🪃</button>
+      <button id="exportPPT">Smash to PPT🥊</button>
+    </div>
+    <hr />
+    <h5>Filters:</h5>
+    <div>
+      <input type="number" placeholder="Sales Min" id="sMinValue" />
+      <input type="number" placeholder="Sales Max" id="sMaxValue" />
+    </div>
+    <div>
+      <input type="number" placeholder="Profit Min" id="pMinValue" />
+      <input type="number" placeholder="Profit Max" id="pMaxValue" />
+    </div>
+    <div>
+      <button class="button-primary" id="filterButton">Filter!</button>
+    </div>
+    <div id="vizContainer">
+      <!-- This is where we shall put the Tableau Dashboard -->
+    </div>
+    <script src="./app.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY="
+      crossorigin="anonymous"
+    />
+  </body>
+</html>
