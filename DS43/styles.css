@@ -1,0 +1,143 @@
+/* Reset some basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f7fb;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Styling */
+h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Fieldset Styling */
+fieldset {
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid #2980b9;
+  border-radius: 10px;
+  background-color: #ecf0f1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2980b9;
+  padding: 0 10px;
+}
+
+/* Fieldset Content */
+.fieldset-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+input[type="button"],
+input[type="number"] {
+  width: calc(33.333% - 20px); /* Make the buttons take up 1/3 of the space */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: #2980b9;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-bottom: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%; /* Prevent overflow */
+  white-space: nowrap; /* Prevent text wrapping inside the button */
+  overflow: hidden; /* Prevent overflow */
+  text-overflow: ellipsis; /* Add ellipsis (...) if the text is too long */
+}
+
+input[type="button"]:hover,
+input[type="button"]:focus {
+  background-color: #3498db;
+  transform: scale(1.05);
+}
+
+input[type="button"]:active {
+  background-color: #2980b9;
+  transform: scale(1);
+}
+
+input[type="number"] {
+  width: calc(50% - 20px); /* Adjust width for number inputs */
+  padding: 12px 20px;
+  border: 1px solid #2980b9;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+input[type="number"]:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 5px rgba(41, 128, 185, 0.8);
+}
+
+/* Change the color of the placeholder text */
+input::placeholder,
+input[type="number"]::placeholder {
+  color: #ffffff; /* Set the placeholder color to a white */
+  opacity: 1; /* Ensure the color shows up (default is often lighter) */
+}
+
+/* Tableau Viz container */
+#hewan {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#hewan tableau-viz {
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fieldset-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input[type="button"],
+  input[type="number"] {
+    width: 100%;
+  }
+
+  #hewan tableau-viz {
+    height: 400px;
+  }
+}
